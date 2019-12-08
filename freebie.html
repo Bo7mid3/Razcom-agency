@@ -30,29 +30,32 @@
                     <span class="icon-bar bar2"></span>
                     <span class="icon-bar bar3"></span>
                 </button>
-                <a href="http://www.creative-tim.com" class="navbar-brand">
-                    RAZ - PROJET
+                <a href="#" class="navbar-brand">
+                    <img style="float: left; height:2.5em; width: 2.8em; transform: translate(0,-30%); margin-right: 10px;" src="assets/img/logo.png"/>Razcom agency
                 </a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right navbar-uppercase">
                     <li>
-                        <a href="#acceuil">Acceuil</a>
+                        <a class="nav-but activ-but" href="#acceuil">Acceuil</a>
                     </li>
                     <li>
-                        <a href="#services">Services</a>
+                        <a class="nav-but" href="#services">Services</a>
                     </li>
                     <li>
-                        <a href="#who-we-are">Who We Are</a>
+                        <a class="nav-but" href="#who-we-are">Equipe</a>
                     </li>
                     <li>
-                        <a href="#clients-testimonials">Clients Testimonials</a>
+                        <a class="nav-but" href="#clients-testimonials">Clients Testimonials</a>
                     </li>
                     <li>
-                        <a href="#contact">contact</a>
+                        <a class="nav-but" href="#contact">contact</a>
                     </li>
-                    <li class="dropdown">
-                        <a href="#gaia" class="dropdown-toggle" data-toggle="dropdown">
+                    <li>
+                        <a class="nav-but" href="#plus-sur-nous">plus sur nous</a>
+                    </li>
+<!--                     <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
                             Demande de devis <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-danger">
@@ -69,9 +72,9 @@
                                 <a href="#">Création D’identité visuelle</a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li>
-                        <a href="http://www.facebook.com" class="btn btn-danger btn-fill">Facebook page</a>
+                        <a href="#" class="btn btn-danger btn-fill">share <i class="fa fa-share-alt"></i></a>
                     </li>
                 </ul>
             </div>
@@ -81,28 +84,21 @@
 
 
     <div class="current-section section section-header" id="acceuil">
-        <div class="parallax filter filter-color-red">
             <div class="image"
-                style="background-image: url('assets/img/header-1.jpeg')">
+                style="background-image: url('assets/img/background.jpg'); background-size: auto; background-position: right center;">
             </div>
             <div class="container">
                 <div class="content">
                     <div class="title-area">
-                        <p>Free Demo</p>
-                        <h1 class="title-modern">RAZ</h1>
-                        <h3>Probably the most stylish bootstrap template in the world!</h2>
+                        <p style="color: #FBCC04; font-size: 21px">RAZCOM AGENCY</p>
+                        <h1 style="color: #00446D" class="title-modern">Faites-nous confiance !</h1>
+                        <h3 style="color: #046CAC;">Les grandes réalisations sont toujours<br> précédées par de grandes idées..</h3>
                         <div class="separator line-separator">♦</div>
-                    </div>
-
-                    <div class="button-get-started">
-                        <a href="http://www.creative-tim.com/product/gaia-bootstrap-template" target="_blank" class="btn btn-white btn-fill btn-lg ">
-                            Download Demo
-                        </a>
+                        <a id="dem-devis" href="#">Demande de devis</a>
                     </div>
                 </div>
 
             </div>
-        </div>
     </div>
 
 
@@ -110,37 +106,48 @@
         <div class="container">
             <div class="row">
                 <div class="title-area">
-                    <h2>Our Services</h2>
+                    <h2 style="color: #FBCC04;">Nos Services</h2>
                     <div class="separator separator-danger">✻</div>
-                    <p class="description">We promise you a new look and more importantly, a new attitude. We build that by getting to know you, your needs and creating the best looking clothes.</p>
+                    <p style="color: #FBCC04;" class="description">Nous sommes une agence Web 360° innovante et dynamique dotée d’une expérience remarquable dans le développement Web et Mobile, la communication digitale, le Web Marketing et les solutions d’hébergement.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-4">
                     <div class="info-icon">
                         <div class="icon text-danger">
-                            <i class="pe-7s-graph1"></i>
+                            <img width="70px" height="70px" src="assets/img/web.png"/>
                         </div>
-                        <h3>Sales</h3>
-                        <p class="description">We make our design perfect for you. Our adjustment turn our clothes into your clothes.</p>
+                        <h3 style="color: white;">Création de site web</h3>
+                        <p style="color: #FBCC04;" class="description">We make our design perfect for you. Our adjustment turn our clothes into your clothes.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="info-icon">
                         <div class="icon text-danger">
-                            <i class="pe-7s-note2"></i>
+                                <img width="70px" height="70px" src="assets/img/network.png"/>
                         </div>
-                        <h3>Content</h3>
-                        <p class="description">We create a persona regarding the multiple wardrobe accessories that we provide..</p>
+                        <h3 style="color: white;">Elaboration de stratégie digitale</h3>
+                        <p style="color: #FBCC04;" class="description">We create a persona regarding the multiple wardrobe accessories that we provide..</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="info-icon">
                         <div class="icon text-danger">
-                            <i class="pe-7s-music"></i>
+                            <img width="70px" height="70px" src="assets/img/smartphone.png"/>
                         </div>
-                        <h3>Music</h3>
-                        <p class="description">We like to present the world with our work, so we make sure we spread the word regarding our clothes.</p>
+                        <h3 style="color: white;">Création d’application mobile Android & Ios</h3>
+                        <p style="color: #FBCC04;" class="description">We like to present the world with our work, so we make sure we spread the word regarding our clothes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        <div class="icon text-danger">
+                            <img width="70px" height="70px" src="assets/img/passport.png"/>
+                        </div>
+                        <h3 style="color: white;">Création D’identité visuelle</h3>
+                        <p style="color: #FBCC04;" class="description">We like to present the world with our work, so we make sure we spread the word regarding our clothes.</p>
                     </div>
                 </div>
             </div>
@@ -149,7 +156,6 @@
 
 
     <div id="who-we-are" class="section section-our-team-freebie">
-        <div class="parallax filter filter-color-black">
             <!-- <div class="image" style="background-image:url('assets/img/header-2.jpeg')">
             </div> -->
             <div class="container">
@@ -215,7 +221,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </div>
 
 
@@ -293,7 +298,7 @@
     </div>
 
 
-    <footer class="section footer footer-big footer-color-black" data-color="black">
+    <footer id="plus-sur-nous" class="section footer footer-big footer-color-black" data-color="black">
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-sm-3">

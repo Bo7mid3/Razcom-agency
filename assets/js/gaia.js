@@ -35,6 +35,7 @@ var scroll_distance = 500;
 
 $(document).ready(function(){
     BrowserDetect.init();
+    window.scrollTo(0, 0);
     document.addEventListener("mousewheel", function(e) {e.preventDefault();}, {passive: false});
     if(BrowserDetect.browser == 'Explorer' && BrowserDetect.version <= 9){
         $('body').html(better_browser);
@@ -306,7 +307,7 @@ var better_browser = '<div class="container"><div class="better-browser row"><di
 /**************added***************/
 window.addEventListener('wheel', function(event)
 {
- if (event.deltaY < 0)
+ if ((event.deltaY < 0) && (!($('.current-section').is('.section-header'))))
  {
   console.log('scrolling up');
   var cur = $('.current-section');
@@ -318,11 +319,12 @@ window.addEventListener('wheel', function(event)
     500,
     'linear'
   )
+
   cur.removeClass('current-section');
  }
  else if ((event.deltaY > 0) && (!($('.current-section').is('.footer'))))
  {
-    console.log('scrolling down');
+  console.log('scrolling down');
   var cur = $('.current-section');
   cur.next().addClass('current-section');
   $('html, body').animate(
@@ -334,4 +336,50 @@ window.addEventListener('wheel', function(event)
   )
   cur.removeClass('current-section');
  }
+ $('.activ-but').removeClass('activ-but');
+ console.log($('.current-section').attr("id"));
+ $('a[href="#'+$('.current-section').attr("id")+'"]').addClass("activ-but");
 });
+
+$('.nav-but').click(function() {
+    $('.activ-but').removeClass('activ-but');
+    $( this ).addClass('activ-but');
+  });
+
+  window.addEventListener("keydown", function(e){
+    if (e.keyCode == 40) {
+        console.log("here");
+    e.preventDefault();
+    if ($('.current-section').is('.footer'))
+    return;
+    var cur = $('.current-section');
+    cur.next().addClass('current-section');
+    $('html, body').animate(
+      {
+        scrollTop: cur.next().offset().top,
+      },
+      500,
+      'linear'
+    )
+    cur.removeClass('current-section');
+    $('.activ-but').removeClass('activ-but');
+    $('a[href="#'+$('.current-section').attr("id")+'"]').addClass("activ-but");
+    }
+    else if (e.keyCode == 38){
+    e.preventDefault();
+    if ($('.current-section').is('.section-header'))
+    return;
+    var cur = $('.current-section');
+    cur.prev().addClass('current-section');
+    $('html, body').animate(
+      {
+        scrollTop: cur.prev().offset().top,
+      },
+      500,
+      'linear'
+    )
+    cur.removeClass('current-section');
+    $('.activ-but').removeClass('activ-but');
+    $('a[href="#'+$('.current-section').attr("id")+'"]').addClass("activ-but");
+    }
+  });
